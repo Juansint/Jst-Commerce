@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/png" href="images/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="images/logo-icon.svg" />
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <script src="js/script.js"></script>
+    <title>JST COMMERCE</title>
+</head>
+
+<body>
+    <!--NAVBAR-->
+    <nav class="navbar">
+        <div class="navbar__container">
+            <div class="logo">
+                <a href="./index.html"><img class="logo__img" src="images/logo.PNG" alt=" JST logo"></a>
+            </div>
+            <div class="container__list">
+                <ul class="navbar__list">
+                    <li class="item">
+                        <a href="./index.html#about">About us</a>
+                    </li>
+                    <li class="item">
+                        <a href="#categories">Categories</a>
+                    </li>
+                    <li class="item">
+                        <a href="#contact">Contact us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </nav>
+    <!--HERO-->
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero__content">
+            <h1>Jst Commerce LLC</h1>
+            <p>Premium Kitchen & Home Products Supplier</p>
+            <p style="margin-top: 20px; font-size: 0.9em;">Established 2025 • San Antonio, Texas</p>
+        </div>
+
+    </section>
+    <div class="positioner__about" id="about"></div>
+    <!-- Main Content -->
+    <div class="container">
+        <!-- About Section -->
+        <section class="section">
+            <h2>About Us</h2>
+            <p style="font-size: 1.2em; line-height: 1.8;">
+                Jst Commerce LLC is a Texas-based e-commerce company specializing in quality kitchen tools and home products. We source innovative products from trusted manufacturers and distribute them through major online marketplaces including Amazon.
+            </p>
+
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>Legal Entity</h3>
+                    <p>Limited Liability Company</p>
+                    <p><strong>EIN:</strong> 41-2428677</p>
+                    <p><strong>Registered:</strong> Texas</p>
+                </div>
+
+                <div class="info-card">
+                    <h3> Location</h3>
+                    <p>San Antonio, Texas</p>
+                    <p>United States</p>
+                </div>
+
+                <div class="info-card">
+                    <h3> Focus</h3>
+                    <p>Kitchen Tools</p>
+                    <p>Home Organization</p>
+                    <p>Household Products</p>
+                </div>
+
+                <div class="info-card">
+                    <h3> Sales Channels</h3>
+                    <p>Amazon FBA</p>
+                    <p>E-commerce Platforms</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <div class="positioner" id="categories"></div>
+        <section class="section">
+            <h2>Product Categories</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>Kitchen Tools</h3>
+                    <p>Innovative gadgets and essential kitchen accessories for modern homes</p>
+                </div>
+
+                <div class="info-card">
+                    <h3>Home Organization</h3>
+                    <p>Space-saving solutions and organizational products</p>
+                </div>
+
+                <div class="info-card">
+                    <h3>Quality Standards</h3>
+                    <p>All products meet US safety and quality requirements</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <div class="positioner" id="contact"></div>
+        <section class="section">
+            <h2>Contact Us</h2>
+            <div class="contact-form">
+                <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                    <div class="form-group">
+                        <label for="name">Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="company">Company</label>
+                        <input type="text" id="company" name="company">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Send Message</button>
+                </form>
+
+
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div style="margin-top: 0.8rem; text-align: left;">
+            <p><strong>Email:</strong> contact@jst-commerce.com</p>
+            <p><strong>Phone:</strong> (209) 889-6740</p>
+        </div>
+        <p style="margin-top: 2rem; font-size: 0.9em;">
+            EIN: 41-2428677 | San Antonio, TX
+        </p>
+        <p class="copy">&copy; 2025 Jst Commerce LLC. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
