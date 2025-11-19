@@ -9,8 +9,7 @@ window.addEventListener('scroll', function() {
     };
 });
 
-
-// Replace YOUR_WEB_APP_URL with the URL from Step 3
+// Your webhook URL
 const WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycbxNaiGxzrZl3gezeDokh4A-OyJtZhxE3-KF5mR_oaMgJnp45AHMg313rAVIRMNo1SnQSQ/exec';
 
 document.getElementById('contactForm').addEventListener('submit', async function(e) {
@@ -33,27 +32,28 @@ document.getElementById('contactForm').addEventListener('submit', async function
     };
 
     try {
-        // Send to Google Apps Script
-        const response = await fetch(WEBHOOK_URL, {
+        // Send to Google Apps Script (using no-cors with fetch)
+        await fetch(WEBHOOK_URL, {
             method: 'POST',
-            mode: 'no-cors', // Important for cross-origin requests
+            mode: 'no-cors',
+            cache: 'no-cache',
             headers: {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify(formData)
         });
 
-        // Show success message
-        statusDiv.innerHTML = '<p style="color: green;">✓ Thank you! Your message has been sent.</p>';
+        // With no-cors, we can't read the response, but if no error thrown, assume success
+        statusDiv.innerHTML = '<p style="color: #5a9e7a; font-weight: bold;">✓ Thank you! Your message has been sent. We\'ll get back to you within 24-48 hours.</p>';
         this.reset(); // Clear form
 
     } catch (error) {
         // Show error message
-        statusDiv.innerHTML = '<p style="color: red;">✗ Error sending message. Please try again.</p>';
+        statusDiv.innerHTML = '<p style="color: #dc3545; font-weight: bold;">✗ Error sending message. Please try again or email us directly.</p>';
         console.error('Error:', error);
+    } finally {
+        // Re-enable button
+        submitButton.disabled = false;
+        submitButton.textContent = 'Send Message';
     }
-
-    // Re-enable button
-    submitButton.disabled = false;
-    submitButton.textContent = 'Submit';
 });
