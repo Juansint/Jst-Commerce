@@ -10,7 +10,7 @@ window.addEventListener('scroll', function() {
 });
 
 // Your webhook URL
-const WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycbxNaiGxzrZl3gezeDokh4A-OyJtZhxE3-KF5mR_oaMgJnp45AHMg313rAVIRMNo1SnQSQ/exec';
+const WEBHOOK_URL = 'https://script.google.com/a/jst-commerce.com/macros/s/AKfycbxWaF7HCTn1R23eyRq7hS_l6LfZcyU54auXep5Iw-_gVThDZhxr/exec';
 
 document.getElementById('contactForm').addEventListener('submit', async function(e) {
     e.preventDefault();
