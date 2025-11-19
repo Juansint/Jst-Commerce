@@ -9,8 +9,7 @@ window.addEventListener('scroll', function() {
     };
 });
 
-// Your webhook URL
-const WEBHOOK_URL = 'https://script.google.com/a/jst-commerce.com/macros/s/AKfycbxWaF7HCTn1R23eyRq7hS_l6LfZcyU54auXep5Iw-_gVThDZhxr/exec';
+const WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycbzXXBSR_1etIsCs_nqbGQvmlu1mR09-7Rfu1dqtZIsRWVABaDipLDMxUK7OJzjUEZnK-w/exec'; // UPDATE THIS!
 
 document.getElementById('contactForm').addEventListener('submit', async function(e) {
     e.preventDefault();
@@ -21,39 +20,36 @@ document.getElementById('contactForm').addEventListener('submit', async function
     // Disable button and show loading
     submitButton.disabled = true;
     submitButton.textContent = 'Sending...';
-    statusDiv.textContent = '';
+    statusDiv.innerHTML = '';
 
     // Get form data
     const formData = {
         name: document.getElementById('name').value,
         email: document.getElementById('email').value,
-        company: document.getElementById('company').value,
+        company: document.getElementById('company').value || '',
         message: document.getElementById('message').value
     };
 
     try {
-        // Send to Google Apps Script (using no-cors with fetch)
-        await fetch(WEBHOOK_URL, {
+        const response = await fetch(WEBHOOK_URL, {
             method: 'POST',
             mode: 'no-cors',
-            cache: 'no-cache',
             headers: {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify(formData)
         });
 
-        // With no-cors, we can't read the response, but if no error thrown, assume success
-        statusDiv.innerHTML = '<p style="color: #5a9e7a; font-weight: bold;">✓ Thank you! Your message has been sent. We\'ll get back to you within 24-48 hours.</p>';
-        this.reset(); // Clear form
+        // Show success message
+        statusDiv.innerHTML = '<p style="color: #5a9e7a; font-weight: bold; margin-top: 15px;">✓ Thank you! Your message has been sent. We\'ll get back to you within 24-48 hours.</p>';
+        this.reset();
 
     } catch (error) {
-        // Show error message
-        statusDiv.innerHTML = '<p style="color: #dc3545; font-weight: bold;">✗ Error sending message. Please try again or email us directly.</p>';
+        statusDiv.innerHTML = '<p style="color: #dc3545; font-weight: bold; margin-top: 15px;">✗ Error sending message. Please try again or email us directly at info@jst-commerce.com</p>';
         console.error('Error:', error);
-    } finally {
-        // Re-enable button
-        submitButton.disabled = false;
-        submitButton.textContent = 'Send Message';
     }
+
+    // Re-enable button
+    submitButton.disabled = false;
+    submitButton.textContent = 'Send Message';
 });
