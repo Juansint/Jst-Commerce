@@ -12,7 +12,7 @@ window.addEventListener('scroll', function() {
 // Wait for the page to fully load before running the script
 document.addEventListener('DOMContentLoaded', function() {
 
-    const WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycbydrAwVA4LlPH0mLgn_-2mZwfa4D8ZxdXQC-f9XVn67XYf0XzgbGOarR1Ulyz53Sqp_wQ/exec';
+    const WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycbxNaiGxzrZl3gezeDokh4A-OyJtZhxE3-KF5mR_oaMgJnp45AHMg313rAVIRMNo1SnQSQ/exec';
 
     const contactForm = document.getElementById('contactForm');
 
