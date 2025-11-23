@@ -19,47 +19,42 @@
 </head>
 
 <body>
-    <!--NAVBAR-->
+    <!-- Navbar -->
     <nav class="navbar">
         <div class="navbar__container">
             <div class="logo">
-                <a href="./index.html"><img class="logo__img" src="images/logo.PNG" alt=" JST logo"></a>
+                <a href="#"><img src="images/logo.PNG" alt="JST Commerce Logo"></a>
             </div>
-            <div class="container__list">
-                <ul class="navbar__list">
-                    <li class="item">
-                        <a href="./index.html#about">About us</a>
-                    </li>
-                    <li class="item">
-                        <a href="#categories">Categories</a>
-                    </li>
-                    <li class="item">
-                        <a href="#contact">Contact us</a>
-                    </li>
-                </ul>
+            <div class="mobile-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
+            <ul class="navbar__list" id="navMenu">
+                <li><a href="#about" onclick="closeMenu()">About</a></li>
+                <li><a href="#categories" onclick="closeMenu()">Categories</a></li>
+                <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+            </ul>
         </div>
     </nav>
-    <!--HERO-->
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero__content">
-            <h1>Jst Commerce LLC</h1>
-            <p>Premium Kitchen & Home Products Supplier</p>
-            <p style="margin-top: 20px; font-size: 0.9em;">Established 2025 • San Antonio, Texas</p>
-        </div>
 
+    <!-- Hero -->
+    <section class="hero">
+        <div>
+            <h1>Jst Commerce LLC</h1>
+            <p>Quality Products for Modern Living</p>
+            <p style="margin-top: 1rem; opacity: 0.9;">Established 2025 • San Antonio, Texas</p>
+        </div>
     </section>
-    <div class="positioner__about" id="about"></div>
+
     <!-- Main Content -->
     <div class="container">
-        <!-- About Section -->
-        <section class="section">
+        <!-- About -->
+        <section class="section reveal" id="about">
             <h2>About Us</h2>
-            <p style="font-size: 1.2em; line-height: 1.8;">
-                Jst Commerce LLC is a Texas-based e-commerce company specializing in quality kitchen tools and home products. We source innovative products from trusted manufacturers and distribute them through major online marketplaces including Amazon.
+            <p>
+                Jst Commerce LLC is a Texas-based e-commerce company focused on sourcing quality products across multiple categories. We partner with verified suppliers to deliver innovative solutions through major online marketplaces including Amazon.
             </p>
-
             <div class="info-grid">
                 <div class="info-card">
                     <h3>Legal Entity</h3>
@@ -67,98 +62,95 @@
                     <p><strong>EIN:</strong> 41-2428677</p>
                     <p><strong>Registered:</strong> Texas</p>
                 </div>
-
                 <div class="info-card">
-                    <h3> Location</h3>
+                    <h3>Location</h3>
                     <p>San Antonio, Texas</p>
                     <p>United States</p>
                 </div>
-
                 <div class="info-card">
-                    <h3> Focus</h3>
-                    <p>Kitchen Tools</p>
-                    <p>Home Organization</p>
-                    <p>Household Products</p>
+                    <h3>Focus</h3>
+                    <p>Multi-Category Retail</p>
+                    <p>Quality Products</p>
+                    <p>US E-commerce Market</p>
                 </div>
-
                 <div class="info-card">
-                    <h3> Sales Channels</h3>
+                    <h3>🛒 Sales Channels</h3>
                     <p>Amazon FBA</p>
                     <p>E-commerce Platforms</p>
                 </div>
             </div>
         </section>
 
-        <!-- Products Section -->
-        <div class="positioner" id="categories"></div>
-        <section class="section">
-            <h2>Product Categories</h2>
+        <!-- Categories -->
+        <section class="section reveal" id="categories">
+            <h2>What We Offer</h2>
+            <p>
+                We specialize in sourcing high-quality products across multiple categories, partnering with verified suppliers to deliver value-driven solutions for modern living.
+            </p>
             <div class="info-grid">
                 <div class="info-card">
-                    <h3>Kitchen Tools</h3>
-                    <p>Innovative gadgets and essential kitchen accessories for modern homes</p>
+                    <h3>Home & Living</h3>
+                    <p>Innovative products for modern homes, from kitchen essentials to organizational solutions</p>
                 </div>
-
                 <div class="info-card">
-                    <h3>Home Organization</h3>
-                    <p>Space-saving solutions and organizational products</p>
+                    <h3>Everyday Essentials</h3>
+                    <p>Quality products for daily life across multiple categories and applications</p>
                 </div>
-
+                <div class="info-card">
+                    <h3>Curated Selection</h3>
+                    <p>Every product is evaluated for quality, value, and market demand</p>
+                </div>
                 <div class="info-card">
                     <h3>Quality Standards</h3>
-                    <p>All products meet US safety and quality requirements</p>
+                    <p>All products meet US safety requirements with verified supplier partnerships</p>
                 </div>
             </div>
         </section>
 
-        <!-- Contact Section -->
-        <div class="positioner" id="contact"></div>
-        <section class="section">
+        <!-- Contact -->
+        <section class="section reveal" id="contact">
             <h2>Contact Us</h2>
+            <p>Get in touch with us for wholesale inquiries or partnership opportunities</p>
             <div class="contact-form">
                 <form id="contactForm">
                     <div class="form-group">
                         <label for="name">Name *</label>
                         <input type="text" id="name" name="name" required>
                     </div>
-
                     <div class="form-group">
                         <label for="email">Email *</label>
                         <input type="email" id="email" name="email" required>
                     </div>
-
                     <div class="form-group">
                         <label for="company">Company</label>
                         <input type="text" id="company" name="company">
                     </div>
-
                     <div class="form-group">
                         <label for="message">Message *</label>
                         <textarea id="message" name="message" rows="6" required></textarea>
                     </div>
-
                     <button type="submit" class="btn-submit">Send Message</button>
                     <div id="formStatus"></div>
                 </form>
-
-
-
+                <div style="margin-top: 2rem; text-align: center; color: #666;">
+                    <p><strong>Email:</strong> info@jst-commerce.com</p>
+                    <p><strong>Phone:</strong> (209) 889-6740</p>
+                    <p style="margin-top: 0.5rem; font-size: 0.9rem;">Business Hours: Monday - Friday, 9AM - 5PM CST</p>
+                </div>
             </div>
         </section>
     </div>
 
     <!-- Footer -->
     <footer>
-        <div style="margin-top: 0.8rem; text-align: left;">
-            <p><strong>Email:</strong> info@jst-commerce.com</p>
-            <p><strong>Phone:</strong> (209) 889-6740</p>
-        </div>
-        <p style="margin-top: 2rem; font-size: 0.9em;">
-            EIN: 41-2428677 | San Antonio, TX
-        </p>
-        <p class="copy">&copy; 2025 Jst Commerce LLC. All rights reserved.</p>
+        <p>&copy; 2025 Jst Commerce LLC. All rights reserved.</p>
+        <p style="margin-top: 1rem; font-size: 0.9em;">EIN: 41-2428677 | San Antonio, TX</p>
     </footer>
 
+    <!-- Scroll to Top Button -->
+    <div class="scroll-top" id="scrollTop" onclick="scrollToTop()">
+        ↑
+    </div>
 </body>
 
 </html>
