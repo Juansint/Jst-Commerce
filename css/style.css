@@ -395,3 +395,160 @@ footer a {
     opacity: 1;
     transform: translateY(0);
 }
+
+
+/* ============================================
+   VENDOR PORTAL SECTION
+   ============================================ */
+
+.vendor-portal-section {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 4rem 2rem;
+    border-radius: 15px;
+    margin: 4rem 0;
+}
+
+.vendor-portal-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.vendor-portal-card {
+    background: white;
+    padding: 3rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border: 3px solid var(--accent-teal);
+}
+
+.vendor-portal-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 2rem;
+    background: linear-gradient(135deg, var(--primary-green), var(--accent-teal));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 20px rgba(59, 169, 156, 0.3);
+}
+
+.vendor-portal-icon i {
+    font-size: 2.5rem;
+    color: white;
+}
+
+.vendor-portal-card h3 {
+    font-size: 2rem;
+    color: var(--primary-green);
+    margin-bottom: 1rem;
+}
+
+.vendor-portal-card>p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.vendor-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+    text-align: left;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    transition: all 0.3s;
+}
+
+.feature-item:hover {
+    background: #e9ecef;
+    transform: translateX(5px);
+}
+
+.feature-item i {
+    color: var(--accent-teal);
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.feature-item span {
+    font-size: 0.95rem;
+    color: var(--text-dark);
+}
+
+.vendor-portal-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: linear-gradient(135deg, var(--primary-green), var(--accent-teal));
+    color: white;
+    padding: 1.25rem 3rem;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s;
+    box-shadow: 0 5px 20px rgba(59, 169, 156, 0.3);
+    margin: 2rem 0 1rem;
+}
+
+.vendor-portal-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(59, 169, 156, 0.4);
+}
+
+.vendor-portal-btn i {
+    font-size: 1.3rem;
+}
+
+.vendor-note {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: #666;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.vendor-note i {
+    color: var(--accent-teal);
+}
+
+
+/* Mobile Styles for Vendor Portal */
+
+@media (max-width: 768px) {
+    .vendor-portal-card {
+        padding: 2rem 1.5rem;
+    }
+    .vendor-portal-icon {
+        width: 60px;
+        height: 60px;
+    }
+    .vendor-portal-icon i {
+        font-size: 2rem;
+    }
+    .vendor-portal-card h3 {
+        font-size: 1.5rem;
+    }
+    .vendor-features {
+        grid-template-columns: 1fr;
+    }
+    .vendor-portal-btn {
+        padding: 1rem 2rem;
+        font-size: 1rem;
+        width: 100%;
+        justify-content: center;
+    }
+}
